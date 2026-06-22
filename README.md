@@ -57,20 +57,7 @@ Na primeira execução o container `app` irá:
 2. Gerar `APP_KEY`
 3. Executar migrations
 
-### 4. (Opcional) Popular usuários demo
-
-```bash
-docker compose exec app php artisan db:seed
-```
-
-Usuários criados:
-
-| E-mail | Senha | Saldo inicial |
-|--------|-------|---------------|
-| alice@demo.com | password123 | R$ 500,00 |
-| bob@demo.com | password123 | R$ 200,00 |
-
-### 5. Acessar a aplicação
+### 4. Acessar a aplicação
 
 | Serviço | URL |
 |---------|-----|
@@ -152,13 +139,6 @@ docker/            Configuração Nginx
 5. Saldo atualizado com `bcmath` (precisão decimal)
 6. Estorno gera operação inversa e marca original como `reversed`
 
-### Decisões técnicas
-
-- **Ledger + saldo cacheado:** histórico auditável + consulta rápida de saldo
-- **Idempotency key:** evita duplicidade em retries de rede
-- **Sanctum SPA:** cookies httpOnly + CSRF para segurança no browser
-- **Repository interface:** facilita testes e inversão de dependência (SOLID)
-
 ## Testes
 
 ```bash
@@ -232,6 +212,3 @@ desafio-full-stack/
 └── README.md
 ```
 
-## Licença
-
-Projeto desenvolvido para fins de avaliação técnica.
