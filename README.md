@@ -27,8 +27,8 @@ Aplicação full-stack de carteira digital com cadastro, autenticação, depósi
 ### 1. Clonar o repositório
 
 ```bash
-git clone <url-do-repositorio>
-cd desafio-full-stack
+git clone git@github.com:LucasOBraun/carteira-financeira.git
+cd carteira-financeira
 ```
 
 ### 2. Configurar variáveis de ambiente do backend
